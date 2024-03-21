@@ -15,7 +15,7 @@ Fastapi
 └── ...
 
 ## Requerimientos 
--Python 3.8 o superior https://www.python.org/downloads/
+- Python 3.8 o superior https://www.python.org/downloads/
 - FastAPI==0.68.0
 - uvicorn==0.15.0
 - Docker 
