@@ -87,18 +87,26 @@ Para verificar que Docker se ha instalado correctamente en tu sistema, puedes ej
 
 2. Construye la imagen Docker
    
-├── Dockerfile           # Archivo Dockerfile para construir la imagen Docker
+├── Dockerfile         
+
+# Archivo Dockerfile para construir la imagen Docker
+
 ![image](https://github.com/romariomartinez/FASTAPI/assets/79557747/c3903725-6533-4012-94a3-a1f29c234826)
-----------------------------------'docker build -t  fastapi .' ---------------------------------
+
+- 'docker build -t  fastapi .'
 
 
-5. Inicia la aplicación utilizando Docker Compose 
+3. Inicia la aplicación utilizando Docker Compose
+
 Utiliza Docker Compose:
+
 Para iniciar la aplicación utilizando Docker Compose, utiliza el siguiente comando debes crear en la  raíz de tu proyecto un archivo docker-compose.yml abjo te dejo una guia de como hacerlo
-├── Docker-compose-up        # Archivo Docker-compose.yml para construir el contenedor de  Docker
+
+# Archivo Docker-compose.yml   para construir el contenedor de  Docker
+
 ![image](https://github.com/romariomartinez/FASTAPI/assets/79557747/bcddbd9f-7e29-41ec-a5bb-0ca665314373)
 
 para crear la imagen de docker y el contenedor utiliza el siguente comando, pero recuerda que primero tienes que crear el archivo DOCKERFILE Y EL DOCKER-COMPOSE.YML para ejecutar este comando 
------------------------------------------------'docker-compose up'.--------------------------------------
 
+- 'docker-compose up'
 
