@@ -2,19 +2,87 @@
 
 FastAPI Calculator es una aplicación web API que realiza operaciones matemáticas básicas utilizando el framework FastAPI 
 
-## Requisitos
+## Estructura del Proyecto
+Fastapi
+│
+├── app/
+│   ├── main.py
+│   ├── requirements.txt
+│   ├──  Dockerfile
+│   └── docker-compose.yml
+│
+├── venv/                # Directorio del entorno virtual
+└── ...
 
-- Python 3.7 o superior
+## Requerimientos 
+ Python 3.8 o superior https://www.python.org/downloads/
+- FastAPI==0.68.0
+- uvicorn==0.15.0
+- Docker 
 
-## Instalación
+## Instalación y Uso
 
-1. Clona el repositorio:
-git clone https://github.com/romariomartinez/FASTAPI.git
+Para ejecutar esta API localmente, sigue estos pasos:
 
-2. Instala las dependencias:
+1. Clona este repositorio.
 
-pip install -r requirements.txt
+   git clone https://github.com/romariomartinez/FASTAPI.git
+   
+2. Crea un entorno virtual ejecutando
+   'python -m venv venv'.
+   
+3. Activa el entorno virtual:
+   - En Windows: 'venv\Scripts\activate'
+   - En macOS y Linux: 'source venv/bin/activate'
+     
+4. Instala las dependencias ejecutando
+   'pip install -r requirements.txt'.
+   
+6. Ejecuta la API con el comando
+   'uvicorn main:app --reload'.
 
-3. Inicia el servidor:
+## Ejemplo de Uso
 
-python server/server.py
+Una vez que la API esté en funcionamiento, puedes acceder a ella desde tu navegador o utilizando herramientas como curl o Postman. Por ejemplo:
+
+curl http://localhost:8000/docs
+
+## Docker
+
+Este proyecto también se puede ejecutar en contenedores Docker. Para ello:
+
+1. Asegúrate de tener Docker instalado en tu sistema.
+   ## Instalacion De Docker
+   
+   Docker es una plataforma que permite desarrollar, enviar y ejecutar aplicaciones en contenedores. A continuación, se detallan los pasos para descargar e instalar Docker en diferentes sistemas operativos:
+
+### Windows y macOS
+
+1. Visita [Docker Desktop](https://www.docker.com/products/docker-desktop) y descarga el instalador adecuado para tu sistema.
+2. Sigue las instrucciones de instalación proporcionadas en la página de descarga.
+3. Una vez instalado, Docker Desktop se ejecutará automáticamente y estará listo para su uso.
+
+### Linux
+
+1. Para las distribuciones basadas en Debian (como Ubuntu), puedes instalar Docker desde el repositorio oficial de Docker. Ejecuta los siguientes comandos en tu terminal:
+
+ 
+   sudo apt update
+   sudo apt install docker.io
+Una vez instalado, puedes iniciar el servicio Docker y configurarlo para que se inicie automáticamente en el arranque ejecutando:
+
+ sudo systemctl start docker
+ sudo systemctl enable docker
+Ahora Docker está instalado y listo para su uso.
+
+Para verificar que Docker se ha instalado correctamente en tu sistema, puedes ejecutar el siguiente comando en tu terminal:
+
+docker --version
+
+2. Construye la imagen Docker
+
+├── Dockerfile           # Archivo Dockerfile para construir la imagen Docker
+![image](https://github.com/romariomartinez/FASTAPI/assets/79557747/c3903725-6533-4012-94a3-a1f29c234826)
+
+   'docker build -t  fastapi .'.
+5. Inicia la aplicación utilizando Docker Compose con 'docker-compose up'.
