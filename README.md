@@ -15,7 +15,7 @@ Fastapi
 └── ...
 
 ## Requerimientos 
- Python 3.8 o superior https://www.python.org/downloads/
+-Python 3.8 o superior https://www.python.org/downloads/
 - FastAPI==0.68.0
 - uvicorn==0.15.0
 - Docker 
@@ -29,16 +29,20 @@ Para ejecutar esta API localmente, sigue estos pasos:
    git clone https://github.com/romariomartinez/FASTAPI.git
    
 2. Crea un entorno virtual ejecutando
+   
    'python -m venv venv'.
    
-3. Activa el entorno virtual:
+4. Activa el entorno virtual:
+   
    - En Windows: 'venv\Scripts\activate'
    - En macOS y Linux: 'source venv/bin/activate'
      
-4. Instala las dependencias ejecutando
+5. Instala las dependencias ejecutando
+   
    'pip install -r requirements.txt'.
    
 6. Ejecuta la API con el comando
+   
    'uvicorn main:app --reload'.
 
 ## Ejemplo de Uso
@@ -80,9 +84,19 @@ Para verificar que Docker se ha instalado correctamente en tu sistema, puedes ej
 docker --version
 
 2. Construye la imagen Docker
-
+   
 ├── Dockerfile           # Archivo Dockerfile para construir la imagen Docker
 ![image](https://github.com/romariomartinez/FASTAPI/assets/79557747/c3903725-6533-4012-94a3-a1f29c234826)
+----------------------------------'docker build -t  fastapi .' ---------------------------------
 
-   'docker build -t  fastapi .'.
-5. Inicia la aplicación utilizando Docker Compose con 'docker-compose up'.
+
+5. Inicia la aplicación utilizando Docker Compose 
+Utiliza Docker Compose:
+Para iniciar la aplicación utilizando Docker Compose, utiliza el siguiente comando debes crear en la  raíz de tu proyecto un archivo docker-compose.yml abjo te dejo una guia de como hacerlo
+├── Docker-compose-up        # Archivo Docker-compose.yml para construir el contenedor de  Docker
+![image](https://github.com/romariomartinez/FASTAPI/assets/79557747/bcddbd9f-7e29-41ec-a5bb-0ca665314373)
+
+para crear la imagen de docker y el contenedor utiliza el siguente comando
+-----------------------------------------------'docker-compose up'.--------------------------------------
+
+
